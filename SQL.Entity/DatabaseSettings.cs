@@ -1,13 +1,14 @@
 using System.Data.SqlClient;
+using SQL.Entity.Interfaces;
 
-namespace SQLEntity {
+namespace SQL.Entity {
 
-	public class DatabaseSettings {
+	public class DatabaseSettings : IDatabaseSettings {
 		public string ConnectionString { get; private set; }
 		public string DatabaseName { get; private set; }
 
 		public DatabaseSettings( string connection_string ) {
-			var connection_string_builder = new SqlConnectionStringBuilder(connection_string);
+			var connection_string_builder = new SqlConnectionStringBuilder( connection_string );
 
 			DatabaseName = connection_string_builder.InitialCatalog;
 			ConnectionString = connection_string;

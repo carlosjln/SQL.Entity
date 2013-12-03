@@ -8,8 +8,8 @@
     <ProjectGuid>{5433FB96-273E-4993-9B89-102D267A1130}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SQLEntity</RootNamespace>
-    <AssemblyName>SQLEntity</AssemblyName>
+    <RootNamespace>SQL.Entity</RootNamespace>
+    <AssemblyName>SQL.Entity</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,9 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DummyEntity, Version=1.0.4855.340, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="SQL, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>packages\DummyEntity.1.0.4855.340\lib\net40\DummyEntity.dll</HintPath>
+      <HintPath>..\packages\SQL.1.0.0.1\lib\net40\SQL.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Settings.cs" />
     <Compile Include="SQLEntity.cs" />
     <Compile Include="Interfaces\ISqlEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -52,12 +53,9 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Database\" />
+    <Folder Include="Extensions\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>if $(ConfigurationName) == Release "C:\Projects\Tools\Nuget\NuGet.exe" pack "$(ProjectPath)" -OutputDirectory "C:\Projects\Tools\Nuget\LocalFeed" -Properties Configuration=Release</PostBuildEvent>
-  </PropertyGroup>
-  <!-- RELEASE TO NUGET LOCAL FEED -->
-  <Target Name="AfterBuild" Condition="'$(Configuration)' == 'Release'">
-    <Exec Command="NugetPacker.exe $(ProjectName) 0 $(ProjectDir)" />
-  </Target>
 </Project>

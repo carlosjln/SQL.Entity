@@ -4,12 +4,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle( "SqlEntity" )]
+[assembly: AssemblyTitle( "SQL.Entity" )]
 [assembly: AssemblyDescription( "" )]
 [assembly: AssemblyConfiguration( "" )]
 [assembly: AssemblyCompany( "Carlos J. López - twitter/carlosjln" )]
-[assembly: AssemblyProduct( "SqlEntity" )]
-[assembly: AssemblyCopyright( "Copyright © 2012" )]
+[assembly: AssemblyProduct( "SQL.Entity" )]
+[assembly: AssemblyCopyright( "Copyright © 2013" )]
 [assembly: AssemblyTrademark( "" )]
 [assembly: AssemblyCulture( "" )]
 
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible( false )]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid( "a1154b0b-5b4f-41d1-9f39-ba7947f60bf0" )]
+[assembly: Guid( "A1154B0B-5B4F-41D1-9F39-BA7947F60BF0" )]
 
 // Version information for an assembly consists of the following four values:
 //

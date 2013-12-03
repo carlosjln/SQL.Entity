@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLEntity", "SQLEntity.csproj", "{5433FB96-273E-4993-9B89-102D267A1130}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQL.Entity", "SQL.Entity/SQL.Entity.csproj", "{5433FB96-273E-4993-9B89-102D267A1130}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

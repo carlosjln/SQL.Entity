@@ -1,29 +1,25 @@
 ﻿using System;
-using SQLEntity.Interfaces;
+using SQL.Entity.Interfaces;
 
-namespace SQLEntity {
+namespace SQL.Entity {
 
 	public abstract class SQLEntity : ISQLEntity {
 		// PROPERTIES
 		public Guid Id { get; set; }
 
-		protected DatabaseSettings database_settings;
-		protected SqlDatabase database;
-
+		protected IDatabaseSettings database_settings;
+		
 		protected SQLEntity() {
 			var entity_type = GetType();
-			var entity_settings = EntitySettings.Get( entity_type );
-
-			use_settings( entity_settings );
+			database_settings = Settings.Get( entity_type );
 		}
 
-		protected SQLEntity( DatabaseSettings database_settings ) {
+		protected SQLEntity( IDatabaseSettings database_settings ) {
 			Id = Guid.NewGuid();
-			
 			this.database_settings = database_settings;
 		}
 
-		public virtual bool Create() {
+		public virtual bool Save() {
 			throw new NotImplementedException();
 //			var sql_db = new SQL.Instance();
 //			sql_db.Connect( nodus_settings.SqlDatabase );
@@ -40,6 +36,4 @@ namespace SQLEntity {
 		}
 
 	}
-
-	public class SqlDatabase {}
 }

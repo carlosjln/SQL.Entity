@@ -1,4 +1,4 @@
 SQLEntity
 =========
 
-Unobtrusive MS SQL Entity
+Unobtrusive MSSQL Entity
