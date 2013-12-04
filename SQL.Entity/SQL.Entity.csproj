@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IDatabaseSettings.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="SQLEntity.cs" />
     <Compile Include="Interfaces\ISqlEntity.cs" />
